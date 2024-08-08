@@ -39,5 +39,5 @@ export default async function handler(
   });
 
   console.log(completion.choices[0]);
-  res.status(200).json({ message: completion.choices[0].message.content });
+  res.status(200).json({ message: completion.choices[0]?.message?.content || '' });
 };
